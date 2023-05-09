@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "Tesla";
+    src: url(./Tesla_Assets/GothamSSm-Book_Web.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory; /* required */
+    scroll-behavior: smooth; /*optional*/
+}
+
+body {
+    font-family: "Tesla";
+}
+
+/* .top {
+  position: fixed;
+  z-index: 10;
+} */
+
+header {
+    /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+.banner-txt {
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    color: #393c41;
+    background-color: #ffffff;
+}
+
+.banner-txt a {
+    text-decoration: underline;
+}
+
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.logo {
+    height: 16px;
+    width: 140px;
+    padding-left: 40px;
+}
+
+.models {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin-left: 50px;
+}
+
+li {
+    list-style-type: none;
+    text-transform: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 15%;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center; /* required */
+}
+
+h1 {
+    padding-top: 130px;
+    padding-left: 780px;
+    font-size: 40px;
+}
+
+p .inventory {
+    padding-left: 812px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+p .solar-inventory {
+    padding-left: 860px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+p .roof-inventory {
+    padding-left: 835px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+p .accessories-inventory {
+    padding-left: 865px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+#open-menu-checkbox {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    right: -249px;
+    top: 0;
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    transition: right 0.8s, opacity 2s;
+    opacity: 0;
+    padding: 10px;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    height: 60%;
+    list-style-type: none;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: #393c41;
+}
+
+.lang {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.country {
+    width: 24px;
+    height: 24px;
+    margin: 8px 0px 24px 8px;
+    padding: 1px;
+}
+
+a.english-link {
+    font-size: 12px;
+}
+
+.us {
+    font-size: 14px;
+}
+
+.usa {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+#open-menu-checkbox:checked ~ nav {
+    right: 0;
+    opacity: 1;
+}
+
+nav label {
+    font-size: 1.5 rem;
+    margin-left: 90%;
+}
+
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#open-menu-checkbox:checked ~ #blur-overlay {
+    opacity: 1;
+    backdrop-filter: blur(3px);
+    pointer-events: all;
+}
+
+#blur-overlay label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#model-y {
+    position: relative;
+}
+
+.button-container {
+    position: fixed;
+    z-index: 10;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    width: 264px;
+    height: 40px;
+    padding: 4px 24px;
+    border: 3px;
+    font-family: "Tesla";
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn1 {
+    background-color: #393c41;
+    color: #ffffff;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    animation: bounce 1.8s infinite ease-in-out;
+}
+
+/* button .shop-btn {
+  width: 264px;
+  height: 40px;
+  padding: 4px 24px;
+  border: 3px;
+  font-family: "Tesla";
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #393c41;
+  color: #ffffff;
+} */
+/* section images for each page */
+
+section:nth-of-type(1) {
+    background-image: url(./Tesla_Assets/Homepage-Model-Y-Global-Desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(2) {
+    background-image: url(./Tesla_Assets/Homepage-Model-3-Desktop-LHD.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(3) {
+    background-image: url(./Tesla_Assets/Model-S-homepage-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(4) {
+    background-image: url(./Tesla_Assets/Homepage-Model-X-Desktop-LHD.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(5) {
+    background-image: url(./Tesla_Assets/Homepage-SolarRoof-Desktop-Global.webp);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(6) {
+    background-image: url(./Tesla_Assets/_25-HP-SolarPanels-D.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section:nth-of-type(7) {
+    background-image: url(./Tesla_Assets/dd739764-bcaa-4263-9488-8c73bc9fb046.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* animations */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    30% {
+        transform: translateY(7px);
+    }
+
+    45% {
+        transform: translateY(0px);
+    }
+
+    65% {
+        transform: translateY(4px);
+    }
+
+    80% {
+        transform: translateY(0px);
+    }
+}
